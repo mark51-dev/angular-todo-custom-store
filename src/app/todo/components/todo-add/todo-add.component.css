@@ -1,0 +1,32 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.todo-item__input {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100%;
+  margin-right: 5px;
+  padding: 10px 20px;
+}
+
+
+.todo-item__button {
+  border-radius: 3px;
+  border: none;
+  background: #1BACF5;
+  padding: 10px 5px;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100px;
+  transition: background-color .3s;
+}
+
+
+.todo-item__button:hover {
+  background: #56C8F5;
+}

@@ -1,0 +1,11 @@
+<div class="todo">
+  <app-todo-item *ngFor="let item of todoListItems" [todoItem]="item" (deleteItem)="deleteTodoItem($event)" (changeStatus)="changeTodoStatus($event)"></app-todo-item>
+  <app-todo-add (addItem)="addNewItem($event)"></app-todo-add>
+  <div *ngIf="todoListItems.length < 1">
+    Todo list is empty
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,50 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 480px;
+  height: 60px;
+  border: 1px solid #a8a4a4;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  transition: background-color .3s;
+  background-color: #fff;
+}
+
+.todo-item:hover {
+  color: #fff;
+  background-color: #cecece;
+  border: 0;
+  transform: scaleX(1.05);
+}
+
+.todo-item__title {
+  margin-right: auto;
+}
+
+.button {
+  border-radius: 3px;
+  border: none;
+  background: #1BACF5;
+  padding: 10px 20px;
+  margin-right: 4px;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.button:hover {
+  background: #56C8F5;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.done {
+  text-decoration: line-through;
+}

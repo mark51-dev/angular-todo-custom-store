@@ -1,0 +1,12 @@
+<div class="todo-item">
+  <div class="todo-item__title" (click)="changeTodoStatus('done')" [ngClass]="{
+    important: todoItem.important,
+    done: todoItem.done
+  }">
+    {{todoItem.title}}
+  </div>
+  <div>
+    <button class="button" (click)="changeTodoStatus('important')">Important</button>
+    <button class="button" (click)="deleteTodoItem()">Delete</button>
+  </div>
+</div>
