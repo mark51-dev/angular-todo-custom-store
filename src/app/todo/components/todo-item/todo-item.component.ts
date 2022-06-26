@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {TodoItem} from "../../../store/todo.store";
 
 @Component({
@@ -6,7 +6,7 @@ import {TodoItem} from "../../../store/todo.store";
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent {
   @Input()
   todoItem: TodoItem;
 
@@ -15,16 +15,12 @@ export class TodoItemComponent implements OnInit {
 
   @Output()
   changeStatus: EventEmitter<{keyValue: string, id: number}> = new EventEmitter();
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  deleteTodoItem() {
+  deleteTodoItem(): void {
    this.deleteItem.emit(this.todoItem.id);
   }
 
-  changeTodoStatus(keyValue: string) {
+  changeTodoStatus(keyValue: string): void {
     this.changeStatus.emit({
       keyValue,
       id: this.todoItem.id

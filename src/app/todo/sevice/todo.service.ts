@@ -9,7 +9,6 @@ export class TodoService {
 
   constructor(private todoStore: TodoStore) { }
 
-
   get getAllTodoItems(): Observable<TodoItem[]> {
     return this.todoStore.select('todoList');
   }
@@ -22,7 +21,7 @@ export class TodoService {
     this.todoStore.set('todoList', todoItem);
   }
 
-  addNewItem(title: string) {
+  addNewItem(title: string): void {
     const randomBinaryId = parseInt(parseInt((Math.random() * 50000).toFixed(7)).toString(2));
     const newItem: TodoItem = {
       id: randomBinaryId,

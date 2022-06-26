@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TodoService} from "../../sevice/todo.service";
 import {TodoItem} from "../../../store/todo.store";
 import {Subscription} from "rxjs";
@@ -29,14 +29,14 @@ export class TodoComponent implements OnInit, OnDestroy {
     this.todoList.deleteTodoItem(filteredTodoList);
   }
 
-  changeTodoStatus(status: any) {
+  changeTodoStatus(status: any): void {
     const idx = this.todoListItems.findIndex(item => item.id === status.id);
     // @ts-ignore
     this.todoListItems[idx][status.keyValue] = !this.todoListItems[idx][status.keyValue];
     this.todoList.updateTodoList(this.todoListItems);
   }
 
-  addNewItem(title: string) {
+  addNewItem(title: string): void {
     console.log(title);
     this.todoList.addNewItem(title);
   }
